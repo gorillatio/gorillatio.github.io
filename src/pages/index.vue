@@ -34,10 +34,6 @@
             | About me
 
     HeroSection#about-me.is-white
-      template(v-slot:head)
-        nav.container.is-fluid.has-text-centered
-          ScrollButton(to="#introduction" color="#123" direction="up")
-            | Introduction
       template(v-slot:body)
         .container
           .columns
@@ -55,10 +51,6 @@
             | Showcase my works
 
     HeroSection#works.is-dark
-      template(v-slot:head)
-        nav.container.is-fluid.has-text-centered
-          ScrollButton(to="#about-me" direction="up")
-            | About me
       template(v-slot:body)
         .container.is-fluid.has-text-centered
           h2.title
