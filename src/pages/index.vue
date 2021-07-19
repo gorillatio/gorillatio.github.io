@@ -86,6 +86,7 @@ export default Vue.extend({
     background-image url('~assets/img/bg01.png')
     background-color: rgba(0,0,0,.5);
     background-blend-mode: darken;
+
   #works
     background-image url('~assets/img/bg02.png')
     background-color: rgba(0,0,0,.5);
