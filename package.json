@@ -1,0 +1,44 @@
+{
+  "name": "gorillatio.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://gorillatio.github.io",
+  "bugs": {
+    "url": "https://github.com/gorillatio/gorillatio.github.io/issues",
+    "email": "gorillatio@users.noreply.github.com"
+  },
+  "license": "UNLICENSED",
+  "author": {
+    "name": "gorillatio",
+    "email": "gorillatio@users.noreply.github.com",
+    "url": "https://github.com/gorillatio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorillatio/gorillatio.github.io"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.7",
+    "@nuxt/typescript-build": "^2.1.0",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^10.1.1",
+    "stylus": "^0.54.8",
+    "stylus-loader": "4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "bulma": "^0.9.3",
+    "nuxt": "^2.15.7",
+    "nuxt-i18n": "^6.27.3",
+    "vue-scrollto": "^2.20.0"
+  }
+}
