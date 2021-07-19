@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+      - nuxt.config.ts
+      - tsconfig.json
+      - package.json
+      - yarn.lock
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Generate static project
+        run: yarn generate
+
+      - name: Publish to GitHub Pages
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+        with:
+          dir: dist
+          branch: publish
+          token: ${{ secrets.ACCESS_TOKEN }}
