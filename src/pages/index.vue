@@ -42,7 +42,7 @@
         .container
           .columns
             .column.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center
-              img#avatar(src="~assets/img/avatar.png")
+              img#avatar(src="~assets/img/avatar.jpg")
             .column
               section.section
                 h2.title(v-html="$t('name')")
@@ -83,12 +83,12 @@ export default Vue.extend({
 
 <style lang="stylus" scoped>
   #introduction
-    background-image url('~assets/img/bg01.png')
+    background-image url('~assets/img/bg01.jpg')
     background-color: rgba(0,0,0,.5);
     background-blend-mode: darken;
 
   #works
-    background-image url('~assets/img/bg02.png')
+    background-image url('~assets/img/bg02.jpg')
     background-color: rgba(0,0,0,.5);
     background-blend-mode: darken;
 
