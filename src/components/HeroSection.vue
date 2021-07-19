@@ -28,4 +28,7 @@ export default Vue.extend({
     background-repeat no-repeat
     background-size cover
     background-attachment fixed
+  @media (hover: none)
+    .hero
+      background-attachment: scroll
 </style>
