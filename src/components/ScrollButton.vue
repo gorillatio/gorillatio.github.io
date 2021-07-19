@@ -46,11 +46,12 @@ export default Vue.extend({
 
 <style lang="stylus" scoped>
 .scroll-button
-  display: inline-block
-  padding: 1rem
+  display inline-block
+  padding 1rem
 
   p.label
     color: var(--color)
+    font-size .6rem
 
   p.up > span
     border-right 1px solid var(--color)
