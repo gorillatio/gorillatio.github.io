@@ -24,7 +24,6 @@ export default Vue.extend({
 <style lang="stylus" scoped>
   .hero
     padding-top 3.25rem
-    padding-bottom 3.25rem
     background-position center center
     background-repeat no-repeat
     background-size cover
@@ -33,4 +32,6 @@ export default Vue.extend({
   @media (hover: none)
     .hero
       background-attachment: scroll
+    .hero-head, .hero-foot
+      display none
 </style>

@@ -74,15 +74,15 @@ export default Vue.extend({
 </script>
 
 <style lang="stylus" scoped>
+  #introduction, #works
+    background-color rgba(0,0,0,.5)
+    background-blend-mode darken
+
   #introduction
     background-image url('~assets/img/bg01.jpg')
-    background-color: rgba(0,0,0,.5);
-    background-blend-mode: darken;
 
   #works
     background-image url('~assets/img/bg02.jpg')
-    background-color: rgba(0,0,0,.5);
-    background-blend-mode: darken;
 
   #avatar
     border-radius 100%
