@@ -22,7 +22,7 @@ const config: NuxtConfig = {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://gorillat.io/' },
       { hid: 'og:title', property: 'og:title', content: 'Pursuit Kawaii for all mankind.' },
-      { hid: 'og:description', property: 'og:description', content: 'Besides defending the earth as hero of justice, I painting Sanpaku-eyes girl in pursuit of Kawaii. Becouse I love Sanpaku-eyes girl the most in the world. Sanpaku-eyes girl is salvation, justice, and order of nature.' },
+      { hid: 'og:description', property: 'og:description', content: 'Sanpaku-eyes girl is salvation, justice, and order of nature.' },
       { hid: 'og:image', property: 'og:image', content: 'https://gorillat.io/ogp.jpg' },
       { name: 'twitter:card', content: 'summary' },
     ],
