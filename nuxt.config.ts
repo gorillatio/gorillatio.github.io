@@ -23,7 +23,7 @@ const config: NuxtConfig = {
       { hid: 'og:url', property: 'og:url', content: 'https://gorillat.io/' },
       { hid: 'og:title', property: 'og:title', content: 'Gorillatio' },
       { hid: 'og:description', property: 'og:description', content: 'Pursuit Kawaii for all mankind.' },
-      { hid: 'og:image', property: 'og:image', content: '~assets/img/avatar.jpg' },
+      { hid: 'og:image', property: 'og:image', content: '/ogp.jpg' },
       { name: 'twitter:card', content: 'summary' },
     ],
     link: [
