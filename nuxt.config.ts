@@ -19,6 +19,10 @@ const config: NuxtConfig = {
       },
       { name: 'theme-color', content: '#000' }
     ],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", href: "/touch-icon.jpg"}
+    ]
   },
   modules: [
     ['vue-scrollto/nuxt', { duration: 300 }],
