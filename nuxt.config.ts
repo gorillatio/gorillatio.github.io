@@ -17,7 +17,7 @@ const config: NuxtConfig = {
         content:
           "Pursuit Kawaii for all mankind."
       },
-      { name: 'theme-color', content: '#000' },
+      { name: 'theme-color', content: '#0a0a0a' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'Gorillatio' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://gorillat.io/' },
