@@ -17,7 +17,14 @@ const config: NuxtConfig = {
         content:
           "Pursuit Kawaii for all mankind."
       },
-      { name: 'theme-color', content: '#000' }
+      { name: 'theme-color', content: '#000' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Gorillatio' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://gorillat.io/' },
+      { hid: 'og:title', property: 'og:title', content: 'Gorillatio' },
+      { hid: 'og:description', property: 'og:description', content: 'Pursuit Kawaii for all mankind.' },
+      { hid: 'og:image', property: 'og:image', content: '~assets/img/avatar.jpg' },
+      { name: 'twitter:card', content: 'summary' },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
