@@ -21,7 +21,7 @@ const config: NuxtConfig = {
       { hid: 'og:site_name', property: 'og:site_name', content: 'Gorillatio' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://gorillat.io/' },
-      { hid: 'og:title', property: 'og:title', content: 'Pursuit Kawaii for all mankind.' },
+      { hid: 'og:title', property: 'og:title', content: 'Gorillatio | Pursuit Kawaii for all mankind.' },
       { hid: 'og:description', property: 'og:description', content: 'Sanpaku-eyes girl is salvation, justice, and order of nature.' },
       { hid: 'og:image', property: 'og:image', content: 'https://gorillat.io/ogp.jpg' },
       { name: 'twitter:card', content: 'summary' },
