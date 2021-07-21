@@ -7,7 +7,11 @@
             p.title
               nuxt-link(:to="localePath('/')")
                 | Gorillatio
-            p.content Made with <i class="fas fa-heart" /> by Tsunemaru
+            p.content.icon-text
+              span Made with
+              span.icon
+                <ion-icon name="heart"></ion-icon>
+              span by Tsunemaru
             p.content
               LocaleSelect
           .column

@@ -6,7 +6,7 @@
           option(v-for="(locale, i) in $i18n.locales" :key="i" :value="locale.code")
             | {{ locale.name }}
       span.icon.is-small.is-left
-        i.fas.fa-globe
+        ion-icon(name="globe-outline")
 </template>
 
 <script lang="ts">

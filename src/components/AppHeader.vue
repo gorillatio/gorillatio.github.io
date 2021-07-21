@@ -5,9 +5,10 @@
         .navbar-brand
           nuxt-link.navbar-item(:to="localePath('/')")
             | Gorillatio
-          a.navbar-item.bars(@click="toggleMenu")
-            i.fas.fa-bars(:class="{active: !isMenuActive}")
-            i.fas.fa-times(:class="{active: isMenuActive}")
+          a.navbar-item.hamburger(@click="toggleMenu" :class="{active: isMenuActive}")
+            ion-icon(name="menu-outline")
+          a.navbar-item.hamburger(@click="toggleMenu" :class="{active: !isMenuActive}")
+            ion-icon(name="close-outline")
     aside#menu.hero.is-fullheight.is-black(:class="{active: isMenuActive}")
       .hero-body
         .container.has-text-centered
@@ -46,11 +47,11 @@ export default Vue.extend({
 .navbar-brand
   width 100%
 
-.bars
+.hamburger
   margin-left auto
-
-  i:not(.active)
-    display none
+  display none
+  &:not(.active)
+    display flex
 
 #header
   z-index 2000
