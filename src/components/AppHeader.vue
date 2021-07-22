@@ -3,7 +3,7 @@
     nav#header.navbar.is-fixed-top.is-black
       .container
         .navbar-brand
-          nuxt-link.navbar-item(:to="localePath('/')")
+          nuxt-link.navbar-item(v-scroll-to="'#introduction'" :to="localePath('/')" @click.native="isMenuActive=false")
             | Gorillatio
           a.navbar-item.hamburger(@click="toggleMenu" :class="{active: isMenuActive}")
             fa-icon(icon="bars")
@@ -12,9 +12,8 @@
     aside#menu.hero.is-fullheight.is-black(:class="{active: isMenuActive}")
       .hero-body
         .container.has-text-centered
-          span.title Gorillatio
+          a.title(v-scroll-to="'#introduction'" :to="localePath('/')" @click="toggleMenu") Gorillatio
           p.section
-            a.item(v-scroll-to="'#introduction'" to='#' @click="toggleMenu") Introduction
             a.item(v-scroll-to="'#about-me'" to='#' @click="toggleMenu") About me
             a.item(v-scroll-to="'#works'" to='#' @click="toggleMenu") Showcase my works
 
