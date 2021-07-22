@@ -4,7 +4,10 @@ const config: NuxtConfig = {
   ssr: false,
   target: 'static',
   srcDir: 'src',
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/google-analytics'
+  ],
   css: ['~assets/scss/main.scss'],
   head: {
     title: 'Gorillatio',
@@ -36,6 +39,9 @@ const config: NuxtConfig = {
     'nuxt-i18n',
     ['@nuxtjs/fontawesome', { component: 'fa', suffix: true }],
   ],
+  googleAnalytics: {
+    id: 'G-3F5SLVYKY8'
+  },
   i18n: {
     locales: [
       { code: 'en', name: 'English'},
