@@ -61,7 +61,7 @@
             | Showcase my works
           .columns
             .column
-              AppCard(image="/img/tumblr.gorillat.io.jpg" link="https://tumblr.gorillat.io/")
+              AppCard(:image="require('~/assets/img/tumblr.gorillat.io.jpg')" link="https://tumblr.gorillat.io/")
                 template(v-slot:head)
                   span.icon
                     fa-icon(:icon="['fab', 'tumblr']")
