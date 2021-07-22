@@ -11,7 +11,7 @@
       Because busy defending the earth, I'm not currently looking for a job, but welcome feedback.<br>
       Get in touch me by Twitter and I will try my best to reply to you.
     tumblr: Illustrations I drew are posted on Tumblr.
-    booth: Original goods are aold at BOOTH.
+    booth: Original goods are sold at BOOTH.
   ja:
     name: |
       つねまる
@@ -22,7 +22,7 @@
       特に仕事は募集していませんが、ご意見ご感想は歓迎します。<br>
       何かございましたらTwitterまでどうぞ。
     tumblr: イラスト置き場。
-    booth: オリジナルグッズ販売.
+    booth: オリジナルグッズ販売。
 </i18n>
 
 <template lang="pug">
