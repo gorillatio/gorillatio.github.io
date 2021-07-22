@@ -10,6 +10,7 @@
       Want to get in touch?<br>
       Because busy defending the earth, I'm not currently looking for a job, but welcome feedback.<br>
       Get in touch me by Twitter and I will try my best to reply to you.
+    tumblr: Illustrations I drew are posted on Tumblr.
   ja:
     name: |
       つねまる
@@ -19,6 +20,7 @@
     contact: |
       特に仕事は募集していませんが、ご意見ご感想は歓迎します。<br>
       何かございましたらTwitterまでどうぞ。
+    tumblr: イラスト置き場。
 </i18n>
 
 <template lang="pug">
@@ -54,9 +56,23 @@
       template(v-slot:body)
         .container.is-fluid.has-text-centered
           h2.title
-            | Works
+            | Portfolio
           p.subtitle
-            | Coming Soon
+            | Showcase my works
+          .columns
+            .column
+              AppCard(image="/img/tumblr.gorillat.io.jpg" link="https://tumblr.gorillat.io/")
+                template(v-slot:head)
+                  span.icon
+                    fa-icon(:icon="['fab', 'tumblr']")
+                  span Tumblr
+                template(v-slot:content) {{ $t('tumblr') }}
+                template(v-slot:footer)
+                  span.icon
+                    fa-icon(:icon="['fab', 'tumblr']")
+                  span View on Tumblr
+            .column
+            .column
 </template>
 
 <script lang="ts">
@@ -64,11 +80,13 @@ import Vue from 'vue'
 import HeroSection from '~/components/HeroSection.vue'
 import ScrollButton from '~/components/ScrollButton.vue'
 import SocialButtons from '~/components/SocialButtons.vue'
+import AppCard from '~/components/AppCard.vue'
 export default Vue.extend({
   components: {
     HeroSection,
     ScrollButton,
-    SocialButtons
+    SocialButtons,
+    AppCard
   }
 })
 </script>
