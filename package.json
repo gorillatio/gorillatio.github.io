@@ -24,13 +24,16 @@
     "start": "nuxt start"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.35.2",
-    "sass-loader": "^12.1.0",
+    "sass-loader": "10.1.1",
     "stylus": "^0.54.8",
     "stylus-loader": "4"
   },

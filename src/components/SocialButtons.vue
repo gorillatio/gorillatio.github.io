@@ -6,7 +6,7 @@
       :href="item.href"
       target="_blank")
       span.icon
-        ion-icon(:name="item.iconName")
+        fa-icon(:icon="['fab', item.iconName]")
       span(v-if="!isIconOnly")
         | {{ item.name }}
 </template>
@@ -32,12 +32,17 @@ export default Vue.extend({
         {
           name: 'Twitter',
           href: 'https://twitter.com/gorillatio',
-          iconName: 'logo-twitter'
+          iconName: 'twitter'
+        },
+        {
+          name: 'Tumblr',
+          href: 'https://tumblr.gorillat.io/',
+          iconName: 'tumblr'
         },
         {
           name: 'Instagram',
           href: 'https://www.instagram.com/gorillatio',
-          iconName: 'logo-instagram',
+          iconName: 'instagram',
         }
       ]
     }

@@ -6,9 +6,9 @@
           nuxt-link.navbar-item(:to="localePath('/')")
             | Gorillatio
           a.navbar-item.hamburger(@click="toggleMenu" :class="{active: isMenuActive}")
-            ion-icon(name="menu-outline")
+            fa-icon(icon="bars")
           a.navbar-item.hamburger(@click="toggleMenu" :class="{active: !isMenuActive}")
-            ion-icon(name="close-outline")
+            fa-icon(icon="times")
     aside#menu.hero.is-fullheight.is-black(:class="{active: isMenuActive}")
       .hero-body
         .container.has-text-centered

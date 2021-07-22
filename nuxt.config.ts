@@ -28,22 +28,13 @@ const config: NuxtConfig = {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "apple-touch-icon", href: "/touch-icon.jpg"}
-    ],
-    script: [
-      {
-        type: "module",
-        src: "https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
-      },
-      {
-        nomodule: "",
-        src: "https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"
-      }
+      { rel: "apple-touch-icon", href: "/touch-icon.jpg" }
     ]
   },
   modules: [
     ['vue-scrollto/nuxt', { duration: 300 }],
-    'nuxt-i18n'
+    'nuxt-i18n',
+    ['@nuxtjs/fontawesome', { component: 'fa', suffix: true }],
   ],
   i18n: {
     locales: [
@@ -56,6 +47,12 @@ const config: NuxtConfig = {
       fallbackLocale: 'en'
     },
     vueI18nLoader: true
+  },
+  fontawesome: {
+    icons: {
+      solid: ['faBars', 'faTimes', 'faHeart', 'faGlobe'],
+      brands: ['faTwitter', 'faInstagram', 'faTumblr']
+    }
   }
 }
 

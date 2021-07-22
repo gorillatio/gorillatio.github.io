@@ -10,7 +10,7 @@
             p.content.icon-text
               span Made with
               span.icon
-                <ion-icon name="heart"></ion-icon>
+                fa-icon(icon="heart")
               span by Tsunemaru
             p.content
               LocaleSelect
