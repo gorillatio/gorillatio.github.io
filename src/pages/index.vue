@@ -11,6 +11,7 @@
       Because busy defending the earth, I'm not currently looking for a job, but welcome feedback.<br>
       Get in touch me by Twitter and I will try my best to reply to you.
     tumblr: Illustrations I drew are posted on Tumblr.
+    booth: Original goods are aold at BOOTH.
   ja:
     name: |
       つねまる
@@ -21,6 +22,7 @@
       特に仕事は募集していませんが、ご意見ご感想は歓迎します。<br>
       何かございましたらTwitterまでどうぞ。
     tumblr: イラスト置き場。
+    booth: オリジナルグッズ販売.
 </i18n>
 
 <template lang="pug">
@@ -56,9 +58,7 @@
       template(v-slot:body)
         .container.is-fluid.has-text-centered
           h2.title
-            | Portfolio
-          p.subtitle
-            | Showcase my works
+            | Works
           .columns
             .column
               AppCard(:image="require('~/assets/img/tumblr.gorillat.io.jpg')" link="https://tumblr.gorillat.io/")
@@ -72,6 +72,10 @@
                     fa-icon(:icon="['fab', 'tumblr']")
                   span View on Tumblr
             .column
+              AppCard(:image="require('~/assets/img/gorillatio.booth.pm.jpg')" link="https://gorillatio.booth.pm/")
+                template(v-slot:head) BOOTH
+                template(v-slot:content) {{ $t('booth') }}
+                template(v-slot:footer) View on BOOTH
             .column
 </template>
 
