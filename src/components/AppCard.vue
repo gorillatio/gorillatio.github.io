@@ -35,4 +35,9 @@ export default Vue.extend({
     .card-content
       .title, .subtitle
         color: #000
+  .image
+    background-color #000
+    img
+      opacity .95
+
 </style>
