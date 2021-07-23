@@ -38,6 +38,7 @@ const config: NuxtConfig = {
     ['vue-scrollto/nuxt', { duration: 300 }],
     'nuxt-i18n',
     ['@nuxtjs/fontawesome', { component: 'fa', suffix: true }],
+    '@nuxtjs/axios'
   ],
   googleAnalytics: {
     id: 'G-3F5SLVYKY8'
@@ -56,7 +57,7 @@ const config: NuxtConfig = {
   },
   fontawesome: {
     icons: {
-      solid: ['faBars', 'faTimes', 'faHeart', 'faGlobe'],
+      solid: ['faBars', 'faTimes', 'faHeart', 'faGlobe', 'faUser', 'faEnvelope', 'faPaperPlane', 'faThumbsUp', 'faSkullCrossbones'],
       brands: ['faTwitter', 'faInstagram', 'faTumblr']
     }
   }

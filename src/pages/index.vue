@@ -77,6 +77,17 @@
                 template(v-slot:content) {{ $t('booth') }}
                 template(v-slot:footer) View on BOOTH
             .column
+
+      template(v-slot:foot)
+        nav.container.is-fluid.has-text-centered
+          ScrollButton(to="#contact")
+            | Get in touch with me
+
+    HeroSection#contact
+      template(v-slot:body)
+        .container
+          h2.title.has-text-centered Get in touch with me
+          ContactForm
 </template>
 
 <script lang="ts">
@@ -85,12 +96,14 @@ import HeroSection from '~/components/HeroSection.vue'
 import ScrollButton from '~/components/ScrollButton.vue'
 import SocialButtons from '~/components/SocialButtons.vue'
 import AppCard from '~/components/AppCard.vue'
+import ContactForm from '~/components/ContactForm.vue'
 export default Vue.extend({
   components: {
     HeroSection,
     ScrollButton,
     SocialButtons,
-    AppCard
+    AppCard,
+    ContactForm
   }
 })
 </script>
