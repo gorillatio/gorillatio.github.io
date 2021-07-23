@@ -32,12 +32,13 @@
       .modal-content
         .box
           section.content
-            template(v-if="hasError")
+            template(v-if="error")
               h3.icon-text
                 span.icon
                   fa-icon(icon="skull-crossbones")
                 span {{ $t('failed') }}
               p {{ $t('error') }}
+              p {{ error }}
             template(v-else)
               h3.icon-text
                 span.icon
@@ -97,6 +98,7 @@ export default Vue.extend({
     return {
       isActive: false,
       hasError: false,
+      error: '',
       name: '',
       email: '',
       subject: '',
@@ -105,27 +107,23 @@ export default Vue.extend({
   },
   methods: {
     async submit() {
-      const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
-      const GOOGLE_FORM_ACTION =
-        'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfaf9edGnZcIPtfNNEzyAgwuZZL1u9Xt6BRXlBxlFCSptDlMw/formResponse'
       const params = new FormData()
       try {
-        // Post to google form
         params.append('entry.2146405557', this.name)
         params.append('entry.179233191', this.email)
         params.append('entry.529215357', this.subject)
         params.append('entry.1843708200', this.message)
-        await axios.post(CORS_PROXY + GOOGLE_FORM_ACTION, params)
-        // Clear form
+
+        await axios.post('/contact/', params)
+
         this.name = ''
         this.email = ''
         this.subject = ''
         this.message = ''
-        this.hasError = false
+        this.error = ''
       } catch (error) {
-        this.hasError = true
+        this.error = JSON.stringify(error)
       } finally {
-        // Open modal window
         this.isActive = true
       }
     },

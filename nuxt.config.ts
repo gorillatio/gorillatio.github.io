@@ -43,6 +43,15 @@ const config: NuxtConfig = {
   googleAnalytics: {
     id: 'G-3F5SLVYKY8'
   },
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/contact/': {
+      target: 'https://docs.google.com',
+      pathRewrite: {'^/contact/': '/forms/u/0/d/e/1FAIpQLSfaf9edGnZcIPtfNNEzyAgwuZZL1u9Xt6BRXlBxlFCSptDlMw/formResponse'},
+    }
+  },
   i18n: {
     locales: [
       { code: 'en', name: 'English'},
