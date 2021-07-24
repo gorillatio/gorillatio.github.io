@@ -16,7 +16,7 @@
           p.section
             a.item(v-scroll-to="'#about-me'" to='#' @click="toggleMenu") About me
             a.item(v-scroll-to="'#works'" to='#' @click="toggleMenu") Showcase my works
-            a.item(v-scroll-to="'#contact'" to='#' @click="toggleMenu") Get in touch with me
+            a.item(v-scroll-to="'#get-in-touch'" to='#' @click="toggleMenu") Get in touch
 
           LocaleSelect.locale
 

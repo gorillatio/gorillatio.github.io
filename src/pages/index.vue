@@ -9,7 +9,7 @@
     contact: |
       Want to get in touch?<br>
       Because busy defending the earth, I'm not currently looking for a job, but welcome feedback.<br>
-      Get in touch me by Twitter and I will try my best to reply to you.
+      Fill out the form below and I will try my best to reply to you.
     tumblr: Illustrations I drew are posted on Tumblr.
     booth: Original goods are sold at BOOTH.
     youtube: Illustration making videos are uploaded on YouTube channel.
@@ -21,7 +21,7 @@
       目つきの悪い娘が好きです。
     contact: |
       特に仕事は募集していませんが、ご意見ご感想は歓迎します。<br>
-      何かございましたらTwitterまでどうぞ。
+      以下のフォームにご記入ください。できる限り返信させていただきます。
     tumblr: イラスト置き場。
     booth: オリジナルグッズ販売。
     youtube: メイキング動画。
@@ -49,7 +49,6 @@
               section.section
                 h2.title(v-html="$t('name')")
                 p.content(v-html="$t('about')")
-                p.content(v-html="$t('contact')")
                 SocialButtons.is-flex.is-justify-content-center(isIconOnly)
       template(v-slot:foot)
         nav.container.is-fluid.has-text-centered
@@ -89,10 +88,15 @@
           ScrollButton(to="#contact")
             | Get in touch with me
 
-    HeroSection#contact
+    HeroSection#get-in-touch
       template(v-slot:body)
         .container
-          h2.title.has-text-centered Get in touch with me
+          h2.title
+            span.icon-text
+              span.icon
+                fa-icon(icon="envelope")
+              span Get in touch
+          p.content(v-html="$t('contact')")
           ContactForm
 </template>
 
