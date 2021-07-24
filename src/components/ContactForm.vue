@@ -32,22 +32,14 @@
       .modal-content
         .box
           section.content
-            template(v-if="error")
-              h3.icon-text
-                span.icon
-                  fa-icon(icon="skull-crossbones")
-                span {{ $t('failed') }}
-              p {{ $t('error') }}
-              p {{ error }}
-              p {{ response }}
-            template(v-else)
-              h3.icon-text
-                span.icon
-                  fa-icon(icon="thumbs-up")
-                span {{ $t('success') }}
-              p {{ $t('thanks') }}
-            button.button(@click="closeModal") {{ $t('close') }}
-    form(@submit.prevent="submit")
+            h3.icon-text
+              span.icon
+                fa-icon(icon="thumbs-up")
+              span Thank you!
+            p {{ $t('thanks') }}
+          button.button(@click="closeModal") {{ $t('close') }}
+    iframe(name="submitComplate" srcdoc="<p>success</p>" style="display:none;")
+    form(@submit.prevent="submit" target="submitComplate")
       .field.is-horizontal
         .field-label.is-normal
           label.label {{ $t('from') }}
@@ -98,9 +90,6 @@ export default Vue.extend({
   data() {
     return {
       isActive: false,
-      hasError: false,
-      error: '',
-      response: '',
       name: '',
       email: '',
       subject: '',
@@ -109,26 +98,23 @@ export default Vue.extend({
   },
   methods: {
     async submit() {
+      const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfaf9edGnZcIPtfNNEzyAgwuZZL1u9Xt6BRXlBxlFCSptDlMw/formResponse'
       const params = new FormData()
-      let response
       try {
         params.append('entry.2146405557', this.name)
         params.append('entry.179233191', this.email)
         params.append('entry.529215357', this.subject)
         params.append('entry.1843708200', this.message)
 
-        response = await axios.post('/contact/', params)
-
+        await axios.post(url, params)
+      } catch (error) {
+        console.log(error)
+      } finally {
+        this.isActive = true
         this.name = ''
         this.email = ''
         this.subject = ''
         this.message = ''
-        this.error = ''
-      } catch (error) {
-        this.error = JSON.stringify(error)
-        this.response = JSON.stringify(response)
-      } finally {
-        this.isActive = true
       }
     },
     closeModal() {
