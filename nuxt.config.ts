@@ -4,9 +4,9 @@ const config: NuxtConfig = {
   ssr: false,
   target: 'static',
   srcDir: 'src',
+  plugins: ['~plugins/gtag'],
   buildModules: [
-    '@nuxt/typescript-build',
-    '@nuxtjs/google-analytics'
+    '@nuxt/typescript-build'
   ],
   css: ['~assets/scss/main.scss'],
   head: {
@@ -40,9 +40,6 @@ const config: NuxtConfig = {
     ['@nuxtjs/fontawesome', { component: 'fa', suffix: true }],
     '@nuxtjs/axios'
   ],
-  googleAnalytics: {
-    id: 'G-3F5SLVYKY8'
-  },
   axios: {
     proxy: true
   },
