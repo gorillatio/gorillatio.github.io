@@ -12,6 +12,7 @@
       Get in touch me by Twitter and I will try my best to reply to you.
     tumblr: Illustrations I drew are posted on Tumblr.
     booth: Original goods are sold at BOOTH.
+    youtube: Illustration making videos are uploaded on YouTube channel.
   ja:
     name: |
       つねまる
@@ -23,6 +24,7 @@
       何かございましたらTwitterまでどうぞ。
     tumblr: イラスト置き場。
     booth: オリジナルグッズ販売。
+    youtube: メイキング動画。
 </i18n>
 
 <template lang="pug">
@@ -67,16 +69,20 @@
                     fa-icon(:icon="['fab', 'tumblr']")
                   span Tumblr
                 template(v-slot:content) {{ $t('tumblr') }}
-                template(v-slot:footer)
-                  span.icon
-                    fa-icon(:icon="['fab', 'tumblr']")
-                  span View on Tumblr
+                template(v-slot:footer) View on Tumblr
             .column
               AppCard(:image="require('~/assets/img/gorillatio.booth.pm.jpg')" link="https://gorillatio.booth.pm/")
                 template(v-slot:head) BOOTH
                 template(v-slot:content) {{ $t('booth') }}
                 template(v-slot:footer) View on BOOTH
             .column
+              AppCard(youtube="https://www.youtube.com/embed/UN6OjYmpvEw" link="https://youtu.be/UN6OjYmpvEw")
+                template(v-slot:head)
+                  span.icon
+                    fa-icon(:icon="['fab', 'youtube']")
+                  span YouTube Channel
+                template(v-slot:content) {{ $t('youtube') }}
+                template(v-slot:footer) View my Channel
 
       template(v-slot:foot)
         nav.container.is-fluid.has-text-centered
