@@ -76,7 +76,7 @@
                 template(v-slot:content) {{ $t('booth') }}
                 template(v-slot:footer) View on BOOTH
             .column
-              AppCard(youtube="https://www.youtube.com/embed/UN6OjYmpvEw" link="https://youtu.be/UN6OjYmpvEw")
+              AppCard(youtube="https://www.youtube.com/embed/UN6OjYmpvEw" link="https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog")
                 template(v-slot:head)
                   span.icon
                     fa-icon(:icon="['fab', 'youtube']")
