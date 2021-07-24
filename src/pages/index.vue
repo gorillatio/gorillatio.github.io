@@ -85,7 +85,7 @@
 
       template(v-slot:foot)
         nav.container.is-fluid.has-text-centered
-          ScrollButton(to="#contact")
+          ScrollButton(to="#get-in-touch")
             | Get in touch with me
 
     HeroSection#get-in-touch
