@@ -39,6 +39,7 @@
                 span {{ $t('failed') }}
               p {{ $t('error') }}
               p {{ error }}
+              p {{ response }}
             template(v-else)
               h3.icon-text
                 span.icon
@@ -99,6 +100,7 @@ export default Vue.extend({
       isActive: false,
       hasError: false,
       error: '',
+      response: '',
       name: '',
       email: '',
       subject: '',
@@ -114,7 +116,7 @@ export default Vue.extend({
         params.append('entry.529215357', this.subject)
         params.append('entry.1843708200', this.message)
 
-        await axios.post('/contact/', params)
+        const response = await axios.post('/contact/', params)
 
         this.name = ''
         this.email = ''
@@ -123,6 +125,7 @@ export default Vue.extend({
         this.error = ''
       } catch (error) {
         this.error = JSON.stringify(error)
+        this.response = JSON.stringify(response)
       } finally {
         this.isActive = true
       }
