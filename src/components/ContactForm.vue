@@ -110,13 +110,14 @@ export default Vue.extend({
   methods: {
     async submit() {
       const params = new FormData()
+      let response
       try {
         params.append('entry.2146405557', this.name)
         params.append('entry.179233191', this.email)
         params.append('entry.529215357', this.subject)
         params.append('entry.1843708200', this.message)
 
-        const response = await axios.post('/contact/', params)
+        response = await axios.post('/contact/', params)
 
         this.name = ''
         this.email = ''
