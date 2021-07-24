@@ -35,6 +35,11 @@ export default Vue.extend({
           iconName: 'twitter'
         },
         {
+          name: 'YouTube',
+          href: 'https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog',
+          iconName: 'youtube',
+        },
+        {
           name: 'Tumblr',
           href: 'https://tumblr.gorillat.io/',
           iconName: 'tumblr'

@@ -67,7 +67,7 @@ const config: NuxtConfig = {
   fontawesome: {
     icons: {
       solid: ['faBars', 'faTimes', 'faHeart', 'faGlobe', 'faUser', 'faEnvelope', 'faPaperPlane', 'faThumbsUp', 'faSkullCrossbones'],
-      brands: ['faTwitter', 'faInstagram', 'faTumblr']
+      brands: ['faTwitter', 'faYoutube', 'faInstagram', 'faTumblr']
     }
   }
 }
