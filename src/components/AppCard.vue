@@ -1,19 +1,17 @@
 <template lang="pug">
   section.card
-    header.card-header(v-if="$slots.head")
-      h4.card-header-title
-        slot(name="head")
+    header.card-header
+      h3.card-header-title(v-html="title")
     a(:href="link" target="_blank" v-if="image" :aria-label="'Link to ' + link").card-image
       figure.image.is-16by9
         img(:src="image" :alt="'Image for '+link")
     .card-image(v-if="youtube")
       figure.image.is-16by9
         iframe.has-ratio(title="YouTube" width="640" height="360" :src="youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-    p.card-content.has-text-left(v-if="$slots.content")
-      slot(name="content")
-    footer.card-footer(v-if="$slots.footer")
+    p.card-content.has-text-left(v-html="content")
+    footer.card-footer
       a(:href="link" target="_blank" class="card-footer-item")
-        slot(name="footer")
+        | View on {{ title }}
 
 </template>
 
@@ -21,6 +19,16 @@
 import Vue from 'vue'
 export default Vue.extend({
   props: {
+    title:  {
+      type: String,
+      required: false,
+      default: ''
+    },
+    content:  {
+      type: String,
+      required: false,
+      default: ''
+    },
     image: {
       type: String,
       required: false,

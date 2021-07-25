@@ -1,22 +1,63 @@
 <template lang="pug">
-  .hero(:class="withNavbar ? 'is-fullheight-with-navbar' : 'is-fullheight'")
-    .hero-head(v-if="$slots.head")
-      slot(name="head")
-    .hero-body(v-if="$slots.body")
-      slot(name="body")
-    .hero-foot(v-if="$slots.foot")
-      slot(name="foot")
+  .hero.is-fullheight
+    aside.hero-head(v-if="previousSectionId")
+      nav.has-text-centered
+        ScrollButton(:to="previousSectionId" :color="color") {{ previousSectionTitle }}
+    .hero-body
+      .container.is-fluid
+        section
+          h2.title.has-text-centered(v-html="title")
+          p.subtitle.has-text-centered(v-if="subtitle" v-html="subtitle")
+          slot
+    aside.hero-foot(v-if="nextSectionId")
+      nav.has-text-centered
+        ScrollButton(:to="nextSectionId" :color="color") {{ nextSectionTitle }}
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import ScrollButton from '~/components/ScrollButton.vue'
+
 export default Vue.extend({
+  components: {
+    ScrollButton
+  },
   props: {
-    withNavbar: {
-      type: Boolean,
+    title: {
+      type: String,
       required: false,
-      default: false
-    }
+      default: ''
+    },
+    subtitle: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    nextSectionId: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    nextSectionTitle: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    previousSectionId: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    previousSectionTitle: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    color: {
+      type: String,
+      required: false,
+      default: '#000'
+    },
   }
 })
 </script>

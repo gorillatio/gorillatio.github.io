@@ -29,75 +29,61 @@
 
 <template lang="pug">
   div
-    HeroSection#introduction.is-dark
-      template(v-slot:body)
-        section.container.is-fluid.has-text-centered
-          h1.title Gorillatio
-          p.subtitle Pursuit <i>Kawaii</i> for all mankind.
-      template(v-slot:foot)
-        nav.container.is-fluid.has-text-centered
-          ScrollButton(to="#about-me")
-            | About me
+    HeroSection#introduction.is-dark(
+      title="Gorillatio"
+      subtitle="Pursuit <i>Kawaii</i> for all mankind."
+      nextSectionId="#about-me"
+      nextSectionTitle="About me"
+      color="#fff"
+    )
 
-    HeroSection#about-me.is-white
-      template(v-slot:body)
-        .container
-          .columns
-            .column.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center
-              img#avatar(src="~assets/img/avatar.jpg" alt="Tsunemaru")
-            .column
-              section.section
-                h2.title(v-html="$t('name')")
-                p.content(v-html="$t('about')")
-                SocialButtons.is-flex.is-justify-content-center(isIconOnly)
-      template(v-slot:foot)
-        nav.container.is-fluid.has-text-centered
-          ScrollButton(to="#works" color="#123")
-            | Showcase my works
+    HeroSection#about-me.is-white(
+      title="About me"
+      nextSectionId="#works"
+      nextSectionTitle="Showcase my works"
+    )
+      section.container
+        .columns
+          .column.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center
+            img#avatar(src="~assets/img/avatar.jpg" alt="Tsunemaru")
+          .column
+            section.section
+              h3.title(v-html="$t('name')")
+              p.content(v-html="$t('about')")
+              SocialButtons.is-flex.is-justify-content-center(isIconOnly)
 
-    HeroSection#works.is-dark
-      template(v-slot:body)
-        .container.is-fluid.has-text-centered
-          h2.title
-            | Works
-          .columns
-            .column
-              AppCard(:image="require('~/assets/img/tumblr.gorillat.io.jpg')" link="https://tumblr.gorillat.io/")
-                template(v-slot:head)
-                  span.icon
-                    fa-icon(:icon="['fab', 'tumblr']")
-                  span Tumblr
-                template(v-slot:content) {{ $t('tumblr') }}
-                template(v-slot:footer) View on Tumblr
-            .column
-              AppCard(:image="require('~/assets/img/gorillatio.booth.pm.jpg')" link="https://gorillatio.booth.pm/")
-                template(v-slot:head) BOOTH
-                template(v-slot:content) {{ $t('booth') }}
-                template(v-slot:footer) View on BOOTH
-            .column
-              AppCard(youtube="https://www.youtube.com/embed/UN6OjYmpvEw" link="https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog")
-                template(v-slot:head)
-                  span.icon
-                    fa-icon(:icon="['fab', 'youtube']")
-                  span YouTube Channel
-                template(v-slot:content) {{ $t('youtube') }}
-                template(v-slot:footer) View my Channel
+    HeroSection#works.is-dark(
+      title="Works"
+      nextSectionId="#get-in-touch"
+      nextSectionTitle="Get in touch with me"
+      color="#fff"
+    )
+      .columns
+        .column
+          AppCard(
+            title="Tumblr"
+            :content="$t('tumblr')"
+            :image="require('~/assets/img/tumblr.gorillat.io.jpg')"
+            link="https://tumblr.gorillat.io/")
+        .column
+          AppCard(
+            title="BOOTH"
+            :content="$t('booth')"
+            :image="require('~/assets/img/gorillatio.booth.pm.jpg')"
+            link="https://gorillatio.booth.pm/")
+        .column
+          AppCard(
+            title="YouTube Channel"
+            :content="$t('youtube')"
+            youtube="https://www.youtube.com/embed/UN6OjYmpvEw"
+            link="https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog")
 
-      template(v-slot:foot)
-        nav.container.is-fluid.has-text-centered
-          ScrollButton(to="#get-in-touch")
-            | Get in touch with me
-
-    HeroSection#get-in-touch
-      template(v-slot:body)
-        .container
-          h2.title
-            span.icon-text
-              span.icon
-                fa-icon(icon="envelope")
-              span Get in touch
-          p.content(v-html="$t('contact')")
-          ContactForm
+    HeroSection#get-in-touch(
+      title="Get in touch"
+      :subtitle="$t('contact')"
+    )
+      .container
+        ContactForm
 </template>
 
 <script lang="ts">
