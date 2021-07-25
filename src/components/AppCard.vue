@@ -2,7 +2,13 @@
   section.card
     header.card-header
       h3.card-header-title(v-html="title")
-    a(:href="link" target="_blank" v-if="image" :aria-label="'Link to ' + link").card-image
+    a.card-image(
+      v-if="image"
+      :href="link"
+      :aria-label="'Link to ' + link"
+      target="_blank"
+      rel="noopener noreferrer"
+    )
       figure.image.is-16by9
         img(:src="image" :alt="'Image for '+link")
     .card-image(v-if="youtube")
@@ -10,7 +16,11 @@
         iframe.has-ratio(title="YouTube" width="640" height="360" :src="youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     p.card-content.has-text-left(v-html="content")
     footer.card-footer
-      a(:href="link" target="_blank" class="card-footer-item")
+      a.card-footer-item(
+        :href="link"
+        target="_blank"
+        rel="noopener noreferrer"
+      )
         | View on {{ title }}
 
 </template>

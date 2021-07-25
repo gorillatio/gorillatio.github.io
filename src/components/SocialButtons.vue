@@ -1,11 +1,13 @@
 <template lang="pug">
   .buttons
     a.button.is-outlined(
-      :class="buttonClasses"
       v-for="item in items"
+      :class="buttonClasses"
       :href="item.href"
+      :aria-label="item.name"
       target="_blank"
-      :aria-label="item.name")
+      rel="noopener noreferrer"
+    )
       span.icon
         fa-icon(:icon="['fab', item.iconName]")
       span(v-if="!isIconOnly")
