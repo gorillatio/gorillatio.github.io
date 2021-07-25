@@ -76,7 +76,7 @@
         .field-body
           .field
             .control
-              button.button.is-primary
+              button.button.is-black
                 span.icon
                   fa-icon(icon="paper-plane")
                 span {{ $t('send') }}
