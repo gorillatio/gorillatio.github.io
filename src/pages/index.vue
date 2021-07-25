@@ -44,7 +44,7 @@
         .container
           .columns
             .column.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center
-              img#avatar(src="~assets/img/avatar.jpg")
+              img#avatar(src="~assets/img/avatar.jpg" alt="Tsunemaru")
             .column
               section.section
                 h2.title(v-html="$t('name')")

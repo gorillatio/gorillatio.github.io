@@ -5,7 +5,7 @@
         slot(name="head")
     a(:href="link" target="_blank" v-if="image").card-image
       figure.image.is-16by9
-        img(:src="image")
+        img(:src="image" :alt="'Image for '+link")
     .card-image(v-if="youtube")
       figure.image.is-16by9
         iframe.has-ratio(title="YouTube" width="640" height="360" :src="youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
