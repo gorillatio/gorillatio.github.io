@@ -16,6 +16,9 @@ export default Vue.extend({
   components: {
     AppHeader,
     AppFooter
+  },
+  head () {
+    return this.$nuxtI18nHead({ addSeoAttributes: true })
   }
 })
 </script>

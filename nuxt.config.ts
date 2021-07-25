@@ -41,9 +41,10 @@ const config: NuxtConfig = {
     '@nuxtjs/axios'
   ],
   i18n: {
+    seo: false,
     locales: [
-      { code: 'en', name: 'English'},
-      { code: 'ja', name: '日本語' }
+      { code: 'en', iso: 'en-US', name: 'English'},
+      { code: 'ja', iso: 'ja-JP', name: '日本語' }
     ],
     defaultLocale: 'en',
     strategy: 'prefix_and_default',
