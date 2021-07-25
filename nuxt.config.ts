@@ -48,6 +48,7 @@ const config: NuxtConfig = {
   ],
   i18n: {
     seo: false,
+    baseUrl: 'https://gorillat.io',
     locales: [
       { code: 'en', iso: 'en-US', name: 'English'},
       { code: 'ja', iso: 'ja-JP', name: '日本語' }
