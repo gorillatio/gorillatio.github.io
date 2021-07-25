@@ -3,7 +3,7 @@
     header.card-header(v-if="$slots.head")
       h4.card-header-title
         slot(name="head")
-    a(:href="link" target="_blank" v-if="image").card-image
+    a(:href="link" target="_blank" v-if="image" :aria-label="'Link to ' + link").card-image
       figure.image.is-16by9
         img(:src="image" :alt="'Image for '+link")
     .card-image(v-if="youtube")

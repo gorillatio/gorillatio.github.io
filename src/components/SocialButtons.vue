@@ -4,7 +4,8 @@
       :class="buttonClasses"
       v-for="item in items"
       :href="item.href"
-      target="_blank")
+      target="_blank"
+      :aria-label="item.name")
       span.icon
         fa-icon(:icon="['fab', item.iconName]")
       span(v-if="!isIconOnly")
