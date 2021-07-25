@@ -8,7 +8,7 @@
         img(:src="image")
     .card-image(v-if="youtube")
       figure.image.is-16by9
-        iframe.has-ratio(width="640" height="360" :src="youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        iframe.has-ratio(title="YouTube" width="640" height="360" :src="youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     p.card-content.has-text-left(v-if="$slots.content")
       slot(name="content")
     footer.card-footer(v-if="$slots.footer")

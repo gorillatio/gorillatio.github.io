@@ -38,7 +38,7 @@
               span Thank you!
             p {{ $t('thanks') }}
           button.button(@click="closeModal") {{ $t('close') }}
-    iframe(name="submitComplate" srcdoc="<p>success</p>" style="display:none;")
+    iframe(title="Dummy frame" name="submitComplate" srcdoc="<p>success</p>" style="display:none;")
     form(@submit.prevent="submit" target="submitComplate")
       .field.is-horizontal
         .field-label.is-normal
