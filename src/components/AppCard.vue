@@ -12,8 +12,12 @@
       figure.image.is-16by9
         img(:src="image" :alt="'Image for '+link")
     .card-image(v-if="youtube")
-      figure.image.is-16by9
-        iframe.has-ratio(title="YouTube" width="640" height="360" :src="youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      figure.image.is-16by9(style="padding-top: 0;")
+        lite-youtube(
+          :videoid="videoid"
+          playlabel="Play: YouTube video"
+        )
+        //- iframe.has-ratio(title="YouTube" width="640" height="360" :src="youtube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
     p.card-content.has-text-left(v-html="content")
     footer.card-footer
       a.card-footer-item(
@@ -49,6 +53,11 @@ export default Vue.extend({
       required: false,
       default: ''
     },
+    videoid: {
+      type: String,
+      required: false,
+      default: ''
+    },
     link: {
       type: String,
       required: true
@@ -66,5 +75,7 @@ export default Vue.extend({
     background-color #000
     img
       opacity .95
+    lite-youtube::before
+      content: none
 
 </style>

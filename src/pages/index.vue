@@ -76,6 +76,7 @@
             title="YouTube Channel"
             :content="$t('youtube')"
             youtube="https://www.youtube.com/embed/UN6OjYmpvEw"
+            videoid="UN6OjYmpvEw"
             link="https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog")
 
     HeroSection#get-in-touch(

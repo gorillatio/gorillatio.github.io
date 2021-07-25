@@ -4,11 +4,17 @@ const config: NuxtConfig = {
   ssr: false,
   target: 'static',
   srcDir: 'src',
-  plugins: ['~plugins/gtag'],
+  plugins: [
+    '~plugins/gtag.ts',
+    '~plugins/youtube.client.ts'
+  ],
   buildModules: [
     '@nuxt/typescript-build'
   ],
-  css: ['~assets/scss/main.scss'],
+  css: [
+    '~assets/scss/main.scss',
+    'node_modules/lite-youtube-embed/src/lite-yt-embed.css'
+  ],
   head: {
     title: 'Gorillatio',
     meta: [
