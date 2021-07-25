@@ -45,7 +45,7 @@
       section.container
         .columns
           .column.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center
-            img#avatar(src="~assets/img/avatar.jpg" alt="Tsunemaru" width="300" height="300")
+            img#avatar(src="~assets/img/avatar.webp" alt="Tsunemaru" width="300" height="300")
           .column
             section.section
               h3.title(v-html="$t('name')")
@@ -58,26 +58,27 @@
       nextSectionTitle="Get in touch with me"
       color="#fff"
     )
-      .columns
-        .column
-          AppCard(
-            title="Tumblr"
-            :content="$t('tumblr')"
-            :image="require('~/assets/img/tumblr.gorillat.io.jpg')"
-            link="https://tumblr.gorillat.io/")
-        .column
-          AppCard(
-            title="BOOTH"
-            :content="$t('booth')"
-            :image="require('~/assets/img/gorillatio.booth.pm.jpg')"
-            link="https://gorillatio.booth.pm/")
-        .column
-          AppCard(
-            title="YouTube Channel"
-            :content="$t('youtube')"
-            youtube="https://www.youtube.com/embed/UN6OjYmpvEw"
-            videoid="UN6OjYmpvEw"
-            link="https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog")
+      .container
+        .columns
+          .column
+            AppCard(
+              title="Tumblr"
+              :content="$t('tumblr')"
+              :image="require('~/assets/img/tumblr.gorillat.io.webp')"
+              link="https://tumblr.gorillat.io/")
+          .column
+            AppCard(
+              title="BOOTH"
+              :content="$t('booth')"
+              :image="require('~/assets/img/gorillatio.booth.pm.webp')"
+              link="https://gorillatio.booth.pm/")
+          .column
+            AppCard(
+              title="YouTube Channel"
+              :content="$t('youtube')"
+              youtube="https://www.youtube.com/embed/UN6OjYmpvEw"
+              videoid="UN6OjYmpvEw"
+              link="https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog")
 
     HeroSection#get-in-touch(
       title="Get in touch"
@@ -111,10 +112,10 @@ export default Vue.extend({
     background-blend-mode darken
 
   #introduction
-    background-image url('~assets/img/bg01.jpg')
+    background-image url('~assets/img/bg01.webp')
 
   #works
-    background-image url('~assets/img/bg02.jpg')
+    background-image url('~assets/img/bg02.webp')
 
   #avatar
     border-radius 100%
