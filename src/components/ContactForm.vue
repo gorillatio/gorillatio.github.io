@@ -42,11 +42,11 @@
     form(@submit.prevent="submit" target="submitComplate")
       .field.is-horizontal
         .field-label.is-normal
-          label.label {{ $t('from') }}
+          label.label(for="name") {{ $t('from') }}
         .field-body
           .field
             .control.is-expanded.has-icons-left
-              input.input(v-model="name" type="text" :placeholder="$t('name')" required="required")
+              input#name.input(v-model="name" type="text" :placeholder="$t('name')" required="required")
               span.icon.is-small.is-left
                 fa-icon(icon="user")
           .field
@@ -57,19 +57,19 @@
 
       .field.is-horizontal
         .field-label.is-normal
-          label.label {{ $t('subject') }}
+          label.label(for="subject") {{ $t('subject') }}
         .field-body
           .field
             .control
-              input.input(v-model="subject" type="text" required="required")
+              input#subject.input(v-model="subject" type="text" required="required")
 
       .field.is-horizontal
         .field-label.is-normal
-          label.label {{ $t('message') }}
+          label.label(for="message") {{ $t('message') }}
         .field-body
           .field
             .control
-              textarea.textarea(v-model="message" required="required")
+              textarea#message.textarea(v-model="message" required="required")
 
       .field.is-horizontal
         .field-label
