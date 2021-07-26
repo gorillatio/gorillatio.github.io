@@ -7,9 +7,8 @@
       Becouse I love <i>Sanpaku-eyes</i> girl the most in the world.<br>
       <i>Sanpaku-eyes</i> girl is salvation, justice, and order of nature.<br>
     contact: |
-      Want to get in touch?<br>
-      Because busy defending the earth, I'm not currently looking for a job, but welcome feedback.<br>
-      Fill out the form below and I will try my best to reply to you.
+      Because busy defending the earth, I'm not currently looking for a job, but welcome feedback.
+      Please ping me on SNS or send me an email and I will try my best to reply to you.
     tumblr: Illustrations I drew are posted on Tumblr.
     booth: Original goods are sold at BOOTH.
     youtube: Illustration making videos are uploaded on YouTube channel.
@@ -21,7 +20,7 @@
       目つきの悪い娘が好きです。
     contact: |
       特に仕事は募集していませんが、ご意見ご感想は歓迎します。<br>
-      以下のフォームにご記入ください。できる限り返信させていただきます。
+      SNSかメールにてご連絡ください。返信できるよう頑張ります。
     tumblr: イラスト置き場。
     booth: オリジナルグッズ販売。
     youtube: メイキング動画。
@@ -48,7 +47,7 @@
             img#avatar(src="~assets/img/avatar.webp" alt="Tsunemaru" width="300" height="300")
           .column
             section.section
-              h3.title(v-html="$t('name')")
+              h3.title.is-5(v-html="$t('name')")
               p.content(v-html="$t('about')")
               SocialButtons.is-flex.is-justify-content-center(isIconOnly)
 
@@ -80,12 +79,19 @@
               videoid="UN6OjYmpvEw"
               link="https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog")
 
-    HeroSection#get-in-touch(
-      title="Get in touch"
-      :subtitle="$t('contact')"
-    )
+    HeroSection#get-in-touch(title="Get in touch")
       .container
-        ContactForm
+        .columns
+          section.column.section
+            h3.title.is-5.has-text-centered Want to get in touch?
+            p.content(v-html="$t('contact')")
+          section.column.section
+            h3.title.is-5.has-text-centered Ping me on
+            p.content
+              SocialButtons(isContactableOnly buttonClasses="is-fullwidth")
+          section.column.section
+            h3.title.is-5.has-text-centered Send me an email
+            ContactForm
 </template>
 
 <script lang="ts">

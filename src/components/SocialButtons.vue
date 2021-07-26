@@ -2,6 +2,7 @@
   .buttons
     a.button.is-outlined(
       v-for="item in items"
+      v-if="!isContactableOnly || item.isContactable"
       :class="buttonClasses"
       :href="item.href"
       :aria-label="item.name"
@@ -27,6 +28,11 @@ export default Vue.extend({
       type: Boolean,
       required: false,
       default: false
+    },
+    isContactableOnly: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
   data() {
@@ -35,22 +41,26 @@ export default Vue.extend({
         {
           name: 'Twitter',
           href: 'https://twitter.com/gorillatio',
-          iconName: 'twitter'
+          iconName: 'twitter',
+          isContactable: true
         },
         {
           name: 'YouTube',
           href: 'https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog',
           iconName: 'youtube',
+          isContactable: false
         },
         {
           name: 'Tumblr',
           href: 'https://tumblr.gorillat.io/',
-          iconName: 'tumblr'
+          iconName: 'tumblr',
+          isContactable: false
         },
         {
           name: 'Instagram',
           href: 'https://www.instagram.com/gorillatio',
           iconName: 'instagram',
+          isContactable: true
         }
       ]
     }

@@ -40,46 +40,27 @@
           button.button(@click="closeModal") {{ $t('close') }}
     iframe(title="Dummy frame" name="submitComplate" srcdoc="<p>success</p>" style="display:none;")
     form(@submit.prevent="submit" target="submitComplate")
-      .field.is-horizontal
-        .field-label.is-normal
-          label.label(for="name") {{ $t('from') }}
-        .field-body
-          .field
-            .control.is-expanded.has-icons-left
-              input#name.input(v-model="name" type="text" :placeholder="$t('name')" required="required")
-              span.icon.is-small.is-left
-                fa-icon(icon="user")
-          .field
-            .control.is-expanded.has-icons-left
-              input.input(v-model="email" type="email" :placeholder="$t('email')" required="required")
-              span.icon.is-small.is-left
-                fa-icon(icon="envelope")
+      .field
+        .control.is-expanded.has-icons-left
+          input#name.input(v-model="name" type="text" :placeholder="$t('name')" required="required")
+          span.icon.is-small.is-left
+            fa-icon(icon="user")
+      .field
+        .control.is-expanded.has-icons-left
+          input.input(v-model="email" type="email" :placeholder="$t('email')" required="required")
+          span.icon.is-small.is-left
+            fa-icon(icon="envelope")
 
-      .field.is-horizontal
-        .field-label.is-normal
-          label.label(for="subject") {{ $t('subject') }}
-        .field-body
-          .field
-            .control
-              input#subject.input(v-model="subject" type="text" required="required")
+      .field
+        .control
+          textarea#message.textarea(v-model="message" :placeholder="$t('message')" required="required")
 
-      .field.is-horizontal
-        .field-label.is-normal
-          label.label(for="message") {{ $t('message') }}
-        .field-body
-          .field
-            .control
-              textarea#message.textarea(v-model="message" required="required")
-
-      .field.is-horizontal
-        .field-label
-        .field-body
-          .field
-            .control
-              button.button.is-black
-                span.icon
-                  fa-icon(icon="paper-plane")
-                span {{ $t('send') }}
+      .field
+        .control
+          button.button.is-black
+            span.icon
+              fa-icon(icon="paper-plane")
+            span {{ $t('send') }}
 </template>
 
 <script lang="ts">
