@@ -31,16 +31,9 @@
     HeroSection#introduction.is-dark(
       title="Gorillatio"
       subtitle="Pursuit <i>Kawaii</i> for all mankind."
-      nextSectionId="#about-me"
-      nextSectionTitle="About me"
-      color="#fff"
     )
 
-    HeroSection#about-me.is-white(
-      title="About me"
-      nextSectionId="#works"
-      nextSectionTitle="Showcase my works"
-    )
+    HeroSection#about-me.is-white(title="About me")
       section.container
         .columns
           .column.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center
@@ -51,12 +44,7 @@
               p.content(v-html="$t('about')")
               SocialButtons.is-flex.is-justify-content-center(isIconOnly)
 
-    HeroSection#works.is-dark(
-      title="Works"
-      nextSectionId="#get-in-touch"
-      nextSectionTitle="Get in touch with me"
-      color="#fff"
-    )
+    HeroSection#works.is-dark(title="Works")
       .container
         .columns
           .column
@@ -97,14 +85,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import HeroSection from '~/components/HeroSection.vue'
-import ScrollButton from '~/components/ScrollButton.vue'
 import SocialButtons from '~/components/SocialButtons.vue'
 import AppCard from '~/components/AppCard.vue'
 import ContactForm from '~/components/ContactForm.vue'
 export default Vue.extend({
   components: {
     HeroSection,
-    ScrollButton,
     SocialButtons,
     AppCard,
     ContactForm

@@ -15,7 +15,7 @@
     aside#menu.hero.is-fullheight.is-black(:class="{active: isMenuActive}")
       .hero-body
         .container.has-text-centered
-          a.title(v-scroll-to="'#introduction'" :to="localePath('/')" @click="toggleMenu") Gorillatio
+          nuxt-link.title(v-scroll-to="'#introduction'" :to="localePath('/')" @click.native="toggleMenu") Gorillatio
           p.section
             a.item(v-scroll-to="'#about-me'" to='#' @click="toggleMenu") About me
             a.item(v-scroll-to="'#works'" to='#' @click="toggleMenu") Showcase my works
