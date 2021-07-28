@@ -8,18 +8,39 @@
           a.navbar-item.hamburger.is-flex-touch(@click="toggleMenu" :class="{active: isMenuActive}")
             fa-icon(:icon="isMenuActive ? 'times' : 'bars'")
           .navbar-end.is-hidden-touch
-            a.navbar-item(v-scroll-to="'#about-me'" to='#') About me
-            a.navbar-item(v-scroll-to="'#works'" to='#') Showcase my works
-            a.navbar-item(v-scroll-to="'#get-in-touch'" to='#') Get in touch
+            a.navbar-item(v-scroll-to="'#about-me'" to='#')
+              span.icon
+                fa-icon(icon="user")
+              span About me
+            a.navbar-item(v-scroll-to="'#works'" to='#')
+              span.icon
+                fa-icon(icon="briefcase")
+              span Showcase my works
+            a.navbar-item(v-scroll-to="'#get-in-touch'" to='#')
+              span.icon
+                fa-icon(icon="envelope")
+              span Get in touch
 
     aside#menu.hero.is-fullheight.is-black(:class="{active: isMenuActive}")
       .hero-body
         .container.has-text-centered
           nuxt-link.title(v-scroll-to="'#introduction'" :to="localePath('/')" @click.native="toggleMenu") Gorillatio
           p.section
-            a.item(v-scroll-to="'#about-me'" to='#' @click="toggleMenu") About me
-            a.item(v-scroll-to="'#works'" to='#' @click="toggleMenu") Showcase my works
-            a.item(v-scroll-to="'#get-in-touch'" to='#' @click="toggleMenu") Get in touch
+            a.item(v-scroll-to="'#about-me'" to='#' @click="toggleMenu")
+              span.icon-text
+                span.icon
+                  fa-icon(icon="user")
+                span About me
+            a.item(v-scroll-to="'#works'" to='#' @click="toggleMenu")
+              span.icon-text
+                span.icon
+                  fa-icon(icon="briefcase")
+                span Showcase my works
+            a.item(v-scroll-to="'#get-in-touch'" to='#' @click="toggleMenu")
+              span.icon-text
+                span.icon
+                  fa-icon(icon="envelope")
+                span Get in touch
 
           LocaleSelect.locale
 </template>
@@ -86,10 +107,10 @@ export default Vue.extend({
 
 @keyframes show {
   0% {
-    opacity: 0;
+    opacity 0
   }
   100% {
-    opacity: 1;
+    opacity 1
   }
 }
 </style>
