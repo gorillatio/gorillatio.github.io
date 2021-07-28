@@ -5,10 +5,13 @@
         .navbar-brand
           nuxt-link.navbar-item(v-scroll-to="'#introduction'" :to="localePath('/')" @click.native="isMenuActive=false")
             | Gorillatio
-          a.navbar-item.hamburger(@click="toggleMenu" :class="{active: isMenuActive}")
-            fa-icon(icon="bars")
-          a.navbar-item.hamburger(@click="toggleMenu" :class="{active: !isMenuActive}")
-            fa-icon(icon="times")
+          a.navbar-item.hamburger.is-flex-touch(@click="toggleMenu" :class="{active: isMenuActive}")
+            fa-icon(:icon="isMenuActive ? 'times' : 'bars'")
+          .navbar-end.is-hidden-touch
+            a.navbar-item(v-scroll-to="'#about-me'" to='#') About me
+            a.navbar-item(v-scroll-to="'#works'" to='#') Showcase my works
+            a.navbar-item(v-scroll-to="'#get-in-touch'" to='#') Get in touch
+
     aside#menu.hero.is-fullheight.is-black(:class="{active: isMenuActive}")
       .hero-body
         .container.has-text-centered
@@ -19,7 +22,6 @@
             a.item(v-scroll-to="'#get-in-touch'" to='#' @click="toggleMenu") Get in touch
 
           LocaleSelect.locale
-
 </template>
 
 <script lang="ts">
@@ -50,8 +52,6 @@ export default Vue.extend({
 .hamburger
   margin-left auto
   display none
-  &:not(.active)
-    display flex
 
 #header
   z-index 2000
