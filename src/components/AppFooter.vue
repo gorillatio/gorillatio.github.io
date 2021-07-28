@@ -5,10 +5,10 @@
         .columns
           .column
             p.title
-              nuxt-link(:to="localePath('/')")
+              nuxt-link(v-scroll-to="'#introduction'" :to="localePath('/')")
                 | Gorillatio
             p.content.icon-text
-              span Made with
+              span Handcrafted with
               span.icon
                 fa-icon(icon="heart")
               span by Tsunemaru
