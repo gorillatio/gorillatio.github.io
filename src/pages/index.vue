@@ -39,18 +39,24 @@
 
     HeroSection#about.is-white(title="About me")
       section.container
-        .columns
+        .columns.section
           .column.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center
             img#avatar(src="~assets/img/avatar.webp" alt="Tsunemaru" width="300" height="300")
           .column
-            section.section
+            section
               h3.title.is-5(v-html="$t('name')")
-              p.content(v-html="$t('about me')")
-              p.content
+              p.py-3(v-html="$t('about me')")
+              p.py-3
                 .buttons.is-flex.is-justify-content-center
-                  a.button.is-black(v-scroll-to="'#works'") {{ $t('check my works') }}
-                  a.button.is-black(v-scroll-to="'#contact'") {{ $t('get in touch') }}
-              aside.has-text-centered
+                  a.button.is-fullwidth(v-scroll-to="'#works'")
+                    span {{ $t('check my works') }}
+                    span.icon
+                      fa-icon(icon="running")
+                  a.button.is-fullwidth(v-scroll-to="'#contact'")
+                    span {{ $t('get in touch') }}
+                    span.icon
+                      fa-icon(icon="envelope")
+              aside.py-3.has-text-centered
                 | Follow me
                 SocialButtons.is-flex.is-justify-content-center(isIconOnly)
 
@@ -80,14 +86,14 @@
     HeroSection#contact(title="Get in touch with me")
       .container
         .columns
-          section.column.section
+          section.column.px-4
             h3.title.is-5.has-text-centered Want to get in touch?
             p.content(v-html="$t('contact')")
-          section.column.section
+          section.column.px-4
             h3.title.is-5.has-text-centered Ping me on SNS
             p.content
               SocialButtons(isContactableOnly buttonClasses="is-fullwidth")
-          section.column.section
+          section.column.px-4
             h3.title.is-5.has-text-centered Send me an email
             ContactForm
 </template>
