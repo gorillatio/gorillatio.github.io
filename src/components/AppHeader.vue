@@ -8,18 +8,18 @@
           a.navbar-item.hamburger.is-flex-touch(@click="toggleMenu" :class="{active: isMenuActive}")
             fa-icon(:icon="isMenuActive ? 'times' : 'bars'")
           .navbar-end.is-hidden-touch
-            a.navbar-item(v-scroll-to="'#about-me'" to='#') About me
-            a.navbar-item(v-scroll-to="'#works'" to='#') Showcase my works
-            a.navbar-item(v-scroll-to="'#get-in-touch'" to='#') Get in touch
+            a.navbar-item(v-scroll-to="'#about'" to='#') About
+            a.navbar-item(v-scroll-to="'#works'" to='#') Works
+            a.navbar-item(v-scroll-to="'#contact'" to='#') Contact
 
     aside#menu.hero.is-fullheight.is-black(:class="{active: isMenuActive}")
       .hero-body
         .container.has-text-centered
           nuxt-link.title(v-scroll-to="'#introduction'" :to="localePath('/')" @click.native="toggleMenu") Gorillatio
           p.section
-            a.item(v-scroll-to="'#about-me'" to='#' @click="toggleMenu") About me
-            a.item(v-scroll-to="'#works'" to='#' @click="toggleMenu") Showcase my works
-            a.item(v-scroll-to="'#get-in-touch'" to='#' @click="toggleMenu") Get in touch
+            a.item(v-scroll-to="'#about'" to='#' @click="toggleMenu") About
+            a.item(v-scroll-to="'#works'" to='#' @click="toggleMenu") Works
+            a.item(v-scroll-to="'#contact'" to='#' @click="toggleMenu") Contact
 
           LocaleSelect.locale
 </template>

@@ -1,26 +1,30 @@
 <i18n lang="yaml">
   en:
     name: |
-      Hi, I’m Tsunemaru, coke drinking illustrator based in Japan.
-    about: |
+      Hi, I’m Tsunemaru, <i>Heppoko</i> illustrator based in Japan.
+    about me: |
       Besides defending the earth as hero of justice, I painting <i>Sanpaku-eyes</i> girl in pursuit of <i>Kawaii</i>.<br>
       Becouse I love <i>Sanpaku-eyes</i> girl the most in the world.<br>
       <i>Sanpaku-eyes</i> girl is salvation, justice, and order of nature.<br>
     contact: |
       Because busy defending the earth, I'm not currently looking for a job, but welcome feedback.
       Please ping me on SNS or send me an email and I will try my best to reply to you.
+    check my works: Check my works
+    get in touch: Get in touch with me
     tumblr: Illustrations I drew are posted on Tumblr.
     booth: Original goods are sold at BOOTH.
     youtube: Illustration making videos are uploaded on YouTube channel.
   ja:
     name: |
-      つねまる
-    about: |
-      可愛いを求めてお絵描きをしています。<br>
-      目つきの悪い娘が好きです。
+      どうも、ヘッポコ絵師の つねまる です。
+    about me: |
+      可愛いを追い求めてお絵描きをしています。<br>
+      目つきの悪い娘が好き好きでたまりません。
     contact: |
       特に仕事は募集していませんが、ご意見ご感想は歓迎します。<br>
       SNSかメールにてご連絡ください。返信できるよう頑張ります。
+    check my works: 作品を見る
+    get in touch: 連絡を取る
     tumblr: イラスト置き場。
     booth: オリジナルグッズ販売。
     youtube: メイキング動画。
@@ -33,7 +37,7 @@
       subtitle="Pursuit <i>Kawaii</i> for all mankind."
     )
 
-    HeroSection#about-me.is-white(title="About me")
+    HeroSection#about.is-white(title="About me")
       section.container
         .columns
           .column.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center
@@ -41,10 +45,16 @@
           .column
             section.section
               h3.title.is-5(v-html="$t('name')")
-              p.content(v-html="$t('about')")
-              SocialButtons.is-flex.is-justify-content-center(isIconOnly)
+              p.content(v-html="$t('about me')")
+              p.content
+                .buttons.is-flex.is-justify-content-center
+                  a.button.is-black(v-scroll-to="'#works'") {{ $t('check my works') }}
+                  a.button.is-black(v-scroll-to="'#contact'") {{ $t('get in touch') }}
+              aside.has-text-centered
+                | Follow me
+                SocialButtons.is-flex.is-justify-content-center(isIconOnly)
 
-    HeroSection#works.is-dark(title="Works")
+    HeroSection#works.is-dark(title="Showcase my works")
       .container
         .columns
           .column
@@ -67,14 +77,14 @@
               videoid="UN6OjYmpvEw"
               link="https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog")
 
-    HeroSection#get-in-touch(title="Get in touch")
+    HeroSection#contact(title="Get in touch with me")
       .container
         .columns
           section.column.section
             h3.title.is-5.has-text-centered Want to get in touch?
             p.content(v-html="$t('contact')")
           section.column.section
-            h3.title.is-5.has-text-centered Ping me on
+            h3.title.is-5.has-text-centered Ping me on SNS
             p.content
               SocialButtons(isContactableOnly buttonClasses="is-fullwidth")
           section.column.section
