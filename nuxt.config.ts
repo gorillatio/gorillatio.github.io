@@ -41,7 +41,6 @@ const config: NuxtConfig = {
     ]
   },
   modules: [
-    ['vue-scrollto/nuxt', { duration: 300 }],
     'nuxt-i18n',
     ['@nuxtjs/fontawesome', { component: 'fa', suffix: true }],
     '@nuxtjs/axios'
@@ -64,6 +63,24 @@ const config: NuxtConfig = {
     icons: {
       solid: ['faBars', 'faTimes', 'faHeart', 'faGlobe', 'faUser', 'faEnvelope', 'faPaperPlane', 'faThumbsUp', 'faSkullCrossbones', 'faRunning'],
       brands: ['faTwitter', 'faYoutube', 'faInstagram', 'faTumblr']
+    }
+  },
+  router: {
+    scrollBehavior (to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition
+      }
+
+      if (to.hash) {
+        const el = document.querySelector(to.hash) as HTMLElement
+        if ('scrollBehavior' in document.documentElement.style) {
+          return window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+        } else {
+          return window.scrollTo(0, el.offsetTop)
+        }
+      }
+
+      return { x: 0, y: 0 }
     }
   }
 }

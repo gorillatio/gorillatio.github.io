@@ -3,33 +3,35 @@
     nav#header.navbar.is-fixed-top.is-black
       .container
         .navbar-brand
-          nuxt-link.navbar-item(v-scroll-to="'#introduction'" :to="localePath('/')" @click.native="isMenuActive=false")
+          AppLink.navbar-item(:to="localePath('/')" @click.native="isMenuActive=false")
             | Gorillatio
           a.navbar-item.hamburger.is-flex-touch(@click="toggleMenu" :class="{active: isMenuActive}")
             fa-icon(:icon="isMenuActive ? 'times' : 'bars'")
           .navbar-end.is-hidden-touch
-            a.navbar-item(v-scroll-to="'#about'" to='#') About
-            a.navbar-item(v-scroll-to="'#works'" to='#') Works
-            a.navbar-item(v-scroll-to="'#contact'" to='#') Contact
+            AppLink.navbar-item(to="#about") About
+            AppLink.navbar-item(to="#works") Works
+            AppLink.navbar-item(to="#contact") Contact
 
     aside#menu.hero.is-fullheight.is-black(:class="{active: isMenuActive}")
       .hero-body
         .container.has-text-centered
-          nuxt-link.title(v-scroll-to="'#introduction'" :to="localePath('/')" @click.native="toggleMenu") Gorillatio
+          AppLink.title(:to="localePath('/')" @click.native="toggleMenu") Gorillatio
           p.section
-            a.item(v-scroll-to="'#about'" to='#' @click="toggleMenu") About
-            a.item(v-scroll-to="'#works'" to='#' @click="toggleMenu") Works
-            a.item(v-scroll-to="'#contact'" to='#' @click="toggleMenu") Contact
+            AppLink.item(to="#about" @click.native="toggleMenu") About
+            AppLink.item(to="#works" @click.native="toggleMenu") Works
+            AppLink.item(to="#contact" @click.native="toggleMenu") Contact
 
           LocaleSelect.locale
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import AppLink from '~/components/AppLink.vue'
 import LocaleSelect from '~/components/LocaleSelect.vue'
 
 export default Vue.extend({
   components: {
+    AppLink,
     LocaleSelect
   },
   data() {

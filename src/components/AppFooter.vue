@@ -5,7 +5,7 @@
         .columns
           .column
             p.title
-              nuxt-link(v-scroll-to="'#introduction'" :to="localePath('/')")
+              AppLink(:to="localePath('/')")
                 | Gorillatio
             p.content.icon-text
               span Handcrafted with
@@ -20,13 +20,15 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import SocialButtons from '~/components/SocialButtons.vue'
+import AppLink from '~/components/AppLink.vue'
 import LocaleSelect from '~/components/LocaleSelect.vue'
+import SocialButtons from '~/components/SocialButtons.vue'
 
 export default Vue.extend({
   components: {
-    SocialButtons,
-    LocaleSelect
+    AppLink,
+    LocaleSelect,
+    SocialButtons
   }
 })
 </script>

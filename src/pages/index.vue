@@ -8,9 +8,9 @@
       <i>Sanpaku-eyes</i> girl is salvation, justice, and order of nature.<br>
     contact: |
       Because busy defending the earth, I'm not currently looking for a job, but welcome feedback.
-      Please ping me on SNS or send me an email and I will try my best to reply to you.
+      Please ping me on social media or send me an email and I will try my best to reply to you.
     check my works: Check my works
-    get in touch: Get in touch with me
+    get in touch: Get in touch
     tumblr: Illustrations I drew are posted on Tumblr.
     booth: Original goods are sold at BOOTH.
     youtube: Illustration making videos are uploaded on YouTube channel.
@@ -48,17 +48,17 @@
               p.py-3(v-html="$t('about me')")
               p.py-3
                 .buttons.is-flex.is-justify-content-center
-                  a.button.is-fullwidth(v-scroll-to="'#works'")
+                  AppLink.button.is-fullwidth(to="#works")
                     span {{ $t('check my works') }}
                     span.icon
                       fa-icon(icon="running")
-                  a.button.is-fullwidth(v-scroll-to="'#contact'")
+                  AppLink.button.is-fullwidth(to="#contact")
                     span {{ $t('get in touch') }}
                     span.icon
                       fa-icon(icon="envelope")
               aside.py-3.has-text-centered
                 | Follow me
-                SocialButtons.is-flex.is-justify-content-center(isIconOnly)
+                SocialButtons.is-flex.is-justify-content-center(icon-only)
 
     HeroSection#works.is-dark(title="Showcase my works")
       .container
@@ -90,9 +90,9 @@
             h3.title.is-5.has-text-centered Want to get in touch?
             p.content(v-html="$t('contact')")
           section.column.px-4
-            h3.title.is-5.has-text-centered Ping me on SNS
+            h3.title.is-5.has-text-centered Ping me on
             p.content
-              SocialButtons(isContactableOnly buttonClasses="is-fullwidth")
+              SocialButtons(contactable buttonClasses="is-fullwidth")
           section.column.px-4
             h3.title.is-5.has-text-centered Send me an email
             ContactForm
@@ -103,12 +103,14 @@ import Vue from 'vue'
 import HeroSection from '~/components/HeroSection.vue'
 import SocialButtons from '~/components/SocialButtons.vue'
 import AppCard from '~/components/AppCard.vue'
+import AppLink from '~/components/AppLink.vue'
 import ContactForm from '~/components/ContactForm.vue'
 export default Vue.extend({
   components: {
     HeroSection,
     SocialButtons,
     AppCard,
+    AppLink,
     ContactForm
   }
 })

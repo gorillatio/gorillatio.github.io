@@ -19,6 +19,13 @@ export default Vue.extend({
   },
   head () {
     return this.$nuxtI18nHead({ addSeoAttributes: true })
+  },
+  mounted() {
+    const hash = this.$route.hash
+    if (hash) {
+      const el = document.querySelector(hash) as HTMLElement
+      window.scrollTo(0, el.offsetTop)
+    }
   }
 })
 </script>
