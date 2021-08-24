@@ -41,7 +41,7 @@
       section.container
         .columns.section
           .column.is-flex.is-flex-direction-column.is-justify-content-center.is-align-items-center
-            img#avatar(src="~assets/img/avatar.webp" alt="Tsunemaru" width="300" height="300")
+            img#avatar(src="https://s.gravatar.com/avatar/3bf3189d11accc41ecff9ac60824cf97?s=300" alt="Tsunemaru" width="300" height="300")
           .column
             section
               h3.title.is-5(v-html="$t('name')")
