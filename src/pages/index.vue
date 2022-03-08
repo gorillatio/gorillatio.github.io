@@ -11,7 +11,7 @@
       Please ping me on social media or send me an email and I will try my best to reply to you.
     check my works: Check my works
     get in touch: Get in touch
-    tumblr: Illustrations I drew are posted on Tumblr.
+    instagram: Illustrations I drew are posted on Instagram.
     booth: Original goods are sold at BOOTH.
     youtube: Illustration making videos are uploaded on YouTube channel.
   ja:
@@ -25,7 +25,7 @@
       SNSかメールにてご連絡ください。返信できるよう頑張ります。
     check my works: 作品を見る
     get in touch: 連絡を取る
-    tumblr: イラスト置き場。
+    instagram: イラスト置き場。
     booth: オリジナルグッズ販売。
     youtube: メイキング動画。
 </i18n>
@@ -65,10 +65,10 @@
         .columns
           .column
             AppCard(
-              title="Tumblr"
-              :content="$t('tumblr')"
-              :image="require('~/assets/img/tumblr.gorillat.io.webp')"
-              link="https://tumblr.gorillat.io/")
+              title="Instagram"
+              :content="$t('instagram')"
+              :image="require('~/assets/img/gorillatio_nametag.webp')"
+              link="https://www.instagram.com/gorillatio/")
           .column
             AppCard(
               title="BOOTH"

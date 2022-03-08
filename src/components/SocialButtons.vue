@@ -45,22 +45,16 @@ export default Vue.extend({
           contactable: true
         },
         {
-          name: 'YouTube',
-          href: 'https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog',
-          iconName: 'youtube',
-          contactable: false
-        },
-        {
-          name: 'Tumblr',
-          href: 'https://tumblr.gorillat.io/',
-          iconName: 'tumblr',
-          contactable: true
-        },
-        {
           name: 'Instagram',
           href: 'https://www.instagram.com/gorillatio',
           iconName: 'instagram',
           contactable: true
+        },
+        {
+          name: 'YouTube',
+          href: 'https://www.youtube.com/channel/UCh4J4PZL9Ra5kTmaja4_Bog',
+          iconName: 'youtube',
+          contactable: false
         }
       ]
     }
