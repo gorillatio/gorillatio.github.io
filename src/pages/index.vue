@@ -8,7 +8,7 @@
       <i>Sanpaku-eyes</i> girl is salvation, justice, and order of nature.<br>
     contact: |
       Because busy defending the earth, I'm not currently looking for a job, but welcome feedback.
-      Please ping me on social media or send me an email and I will try my best to reply to you.
+      Please ping me on social media and I will try my best to reply to you.
     check my works: Check my works
     get in touch: Get in touch
     instagram: Illustrations I drew are posted on Instagram.
@@ -22,7 +22,7 @@
       目つきの悪い娘が好き好きでたまりません。
     contact: |
       特に仕事は募集していませんが、ご意見ご感想は歓迎します。<br>
-      SNSかメールにてご連絡ください。返信できるよう頑張ります。
+      SNSにてご連絡ください。返信できるよう頑張ります。
     check my works: 作品を見る
     get in touch: 連絡を取る
     instagram: イラスト置き場。
@@ -93,9 +93,6 @@
             h3.title.is-5.has-text-centered Ping me on
             p.content
               SocialButtons(contactable buttonClasses="is-fullwidth")
-          section.column.px-4
-            h3.title.is-5.has-text-centered Send me an email
-            ContactForm
 </template>
 
 <script lang="ts">
