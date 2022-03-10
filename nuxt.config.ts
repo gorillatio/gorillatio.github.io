@@ -9,7 +9,8 @@ const config: NuxtConfig = {
     '~plugins/youtube.client.ts'
   ],
   buildModules: [
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    '@nuxtjs/fontawesome',
   ],
   css: [
     '~assets/scss/main.scss',
@@ -42,7 +43,6 @@ const config: NuxtConfig = {
   },
   modules: [
     'nuxt-i18n',
-    ['@nuxtjs/fontawesome', { component: 'fa', suffix: true }],
     '@nuxtjs/axios'
   ],
   i18n: {
@@ -60,6 +60,8 @@ const config: NuxtConfig = {
     vueI18nLoader: true
   },
   fontawesome: {
+    component: 'fa',
+    suffix: true,
     icons: {
       solid: ['faBars', 'faTimes', 'faHeart', 'faGlobe', 'faUser', 'faEnvelope', 'faPaperPlane', 'faThumbsUp', 'faSkullCrossbones', 'faRunning'],
       brands: ['faTwitter', 'faYoutube', 'faInstagram']
